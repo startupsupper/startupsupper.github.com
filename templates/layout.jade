@@ -18,8 +18,55 @@ html(lang='en')
     link(rel='stylesheet', href='/style/bootstrap/bootstrap.css')
     link(rel='stylesheet', href='/style/bootstrap/responsive.css')
   body
+
+    //- old stuff...
     //- fork repo badge, facebook, twitter, pinterest
     //-h1= page.title
+
+    //- newsletter signup
+    #newsletter(tabindex='-1', role='dialog', aria-labeledby='newsletter-label', aria-hidden='true').modal.hide.fade
+      .modal-header
+        button(type='button', data-dismiss='modal', aria-hidden='true').close &times;
+        h3#newsletter-label Get weekly recipes
+      .modal-body
+        form(action='http://startupsupper.us6.list-manage1.com/subscribe/post?u=02d75e52b9eeb96bfb84bef02&amp;id=05dc247e98', method='post').form-inline.hidden-phone
+          input(type='email', name='EMAIL', placeholder='Email address', required)
+          button(type='submit').btn.btn-primary Subscribe
+        form(action='http://startupsupper.us6.list-manage1.com/subscribe/post?u=02d75e52b9eeb96bfb84bef02&amp;id=05dc247e98', method='post').visible-phone
+          input(type='email', name='EMAIL', placeholder='Email address', required)
+          button(type='submit').btn.btn-primary Subscribe
+          .text-success.pull-right <i class="icon-ok-sign"></i> No spam
+      .modal-footer
+        .hidden-phone.text-success.pull-left <i class="icon-ok-sign"></i> We'll never spam you.
+        button(data-dismiss='modal', aria-hidden='true').btn Close
+        a(href='#example', data-toggle='modal').btn.btn-success.hidden-phone View Example
+
+    #example(tabindex='-1', role='dialog', aria-labeledby='example-label', aria-hidden='true').modal.hide.fade
+      .modal-header
+        button(type='button', data-dismiss='modal', aria-hidden='true').close &times;
+        h3#example-label Here's an example newsletter:
+      .modal-body
+        table.table.table-bordered
+          thead
+            tr
+              th To:
+              td!= 'Nikola Tesla <<a href="mailto:tesla@wardenclyffe.com">tesla@wardenclyffe.com</a>>'
+            tr
+              th From:
+              td!= 'StartupSupper <<a href="mailto:startupsupper@gmail.com">startupsupper@gmail.com</a>>'
+            tr
+              th Subject:
+              td StartupSupper - Pepper Steak Stir Fry
+          tbody
+            tr
+              th(colspan=2) Message:
+            tr
+              td(colspan=2).
+                Blah blah blah
+      .modal-footer
+        button(data-dismiss='modal', aria-hidden='true').btn Close
+
+    //- the goods
     #wrap
       .navbar.navbar-inverse.navbar-fixed-top
         .navbar-inner
@@ -29,6 +76,10 @@ html(lang='en')
                 span.icon-bar
                 span.icon-bar
                 span.icon-bar
+              form.form-inline.hidden-phone.pull-left.navbar-form(action='http://startupsupper.us6.list-manage1.com/subscribe/post?u=02d75e52b9eeb96bfb84bef02&amp;id=05dc247e98', method='post')
+                .pull-left.navbar-text Get weekly recipes:&nbsp;
+                .input-append.pull-left
+                  <input class="span2" type="email" id='navbar-email' name='EMAIL' placeholder="Email address" required /><button class="btn btn-inverse" type="submit"><i class="icon-envelope-alt"></i></button>
               //-.
                 form.navbar-search.hidden-phone
                   .input-append
@@ -44,7 +95,7 @@ html(lang='en')
                 li.dropdown
                   a(href='#', data-toggle='dropdown').dropdown-toggle <i class="icon-gift"></i> Goodies <b class="caret"></b>
                   ul.dropdown-menu
-                    li: a(href='#newsletter') <i class="icon-envelope"></i> Newsletter
+                    li: a(href='#newsletter', data-toggle='modal', data-target='#newsletter') <i class="icon-envelope-alt"></i> Newsletter
                     li: a(href='https://github.com/startupsupper/startupsupper.github.com', target='_blank') <i class="icon-github"></i> Github
                     li: a(href='https://www.facebook.com/startupsupper', target='_blank') <i class="icon-facebook-sign"></i> Facebook
                     li: a(href='https://twitter.com/startupsupper', target='_blank') <i class="icon-twitter"></i> Twitter
@@ -57,9 +108,13 @@ html(lang='en')
               h4 Living on instant ramen would be very unhealthy.
               small Paul Graham in <cite><strong><a href="http://paulgraham.com/ramenprofitable.html#f1n" target="_blank">Ramen Profitable</a></strong></cite>
             p
-              a(href='/newsletter').btn.btn-success.btn-large <i class="icon-envelope"></i> <span class="hidden-phone">Join our Newsletter</span><span class="visible-phone">Join</span>
-              | &nbsp;
-              a(href='https://github.com/startupsupper/startupsupper.github.com#startupsupper', target='_blank').btn.btn-inverse.btn-large <i class="icon-github"></i> <span class="hidden-phone">Contribute on Github</span><span class="visible-phone">Github</span>
+              .pull-left
+                button(data-toggle='modal', data-target='#newsletter').btn.btn-success.btn-large.hidden-phone <i class="icon-envelope-alt"></i> Join our Newsletter
+                button(data-toggle='modal', data-target='#newsletter').btn.btn-success.btn-large.visible-phone <i class="icon-envelope-alt"></i> Join
+              .pull-left &nbsp;
+              .pull-left
+                a(href='https://github.com/startupsupper/startupsupper.github.com#startupsupper', target='_blank').btn.btn-inverse.btn-large.hidden-phone <i class="icon-github"></i> Contribute on Github
+                a(href='https://github.com/startupsupper/startupsupper.github.com#startupsupper', target='_blank').btn.btn-inverse.btn-large.visible-phone <i class="icon-github"></i> Github
       .container
         block content
           != page.html
