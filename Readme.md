@@ -45,9 +45,16 @@ Easily submit your recipe following these instructions:
 
 6. Submit a new pull request, we'll merge it, and your recipe will be automatically published.
 
+    ```bash
+    git push origin source
+    ```
+
+    > Then visit your fork of the repo Github on Github and submit a pull request.
+
     > (e.g. <http://startupsupper.com/recipes/chicken-noodle-soup>)
 
 ## Lazyweb Requests
 
+- [ ] CLI helper tool to create recipe, add instructions, and submit github pull request using github apiv3
 - [ ] Integrate <https://github.com/christophercliff/wintersmith-kelvin>
 - [ ] page.metadata.image in layout.jade

@@ -1,7 +1,19 @@
 {
   "name": "startupsupper",
-  "version": "0.0.1",
   "description": "Recipes for Bootstrappers & Hungry Hackers",
+  "version": "0.0.1",
+  "author": "Nick Baugh <niftylettuce@gmail.com>",
+  "contributors": [
+    {
+      "name": "Nick Baugh",
+      "email": "niftylettuce@gmail.com"
+    },
+    {
+      "name": "Jacob Chapel",
+      "email": "jacob.chapel@gmail.com"
+    }
+  ],
+  "keywords": [ "recipes", "startupsupper", "startup", "recipe" ],
   "main": "",
   "devDependencies": {
     "grunt": "0.3.17",
