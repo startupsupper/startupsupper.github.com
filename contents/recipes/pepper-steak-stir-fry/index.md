@@ -29,9 +29,9 @@ thumbnails:
   - beansauce.jpg
   - pepper.jpg
   - jalapeno.jpg
+steps:
+  - Cut beef into equal-sized small strips. Cut across the grain. Season with salt and pepper (lots of pepper).
+  - Heat a few tablespoons of oil in a large pan or wok. Add bell peppers, eggplant, jalapeno, and garlic. Add 1/2 tsp of salt. Saute for 5-8 minutes, stirring, or until eggplant is soft.
+  - Make some room for the beef in the pan, then add it to the pan. Add more oil if necessary.
+  - Add soy sauce and chili sauce. Continue cooking for 5-8 minutes or until beef is done, stirring continuously. Get the rice ready, it's time for STEAK NIGHT.
 ---
-
-1. Cut beef into equal-sized small strips. Cut across the grain. Season with salt and pepper (lots of pepper).
-2. Heat a few tablespoons of oil in a large pan or wok. Add bell peppers, eggplant, jalapeno, and garlic. Add 1/2 tsp of salt. Saute for 5-8 minutes, stirring, or until eggplant is soft.
-3. Make some room for the beef in the pan, then add it to the pan. Add more oil if necessary.
-4. Add soy sauce and chili sauce. Continue cooking for 5-8 minutes or until beef is done, stirring continuously. Get the rice ready, it's time for STEAK NIGHT.

@@ -42,7 +42,12 @@ block content
                 a(href=thumbnail, target='_blank').thumbnail
                   img(src=thumbnail, alt='')
         h2 Preparation
-        != page.html
+        ol
+          each step in page.metadata.steps
+            li= step
+        - if (page.html !== '')
+          h3 Notes
+          != page.html
     .row.visible-phone
       .span4
           mixin author(page.metadata.author)

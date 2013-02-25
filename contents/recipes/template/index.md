@@ -16,14 +16,16 @@ photo: apple-surprise.jpg
 thumbnails:
   - apple.jpg
   - sugar.jpg
+steps:
+  - Prepare!
+  - Cook!
+  - Eat!
 ---
+
+You can add notes and <strong>HTML</strong> and **Markdown** syntax here.
 
 This is a test recipe, yahoo!
 
 **Make it awesome!**
-
-1. Prepare!
-2. Cook!
-3. <s>Profit</s> Eat!
 
 P.S. Add some photos if you can.
