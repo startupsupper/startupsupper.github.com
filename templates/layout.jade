@@ -81,10 +81,15 @@ html(lang='en')
                   ul
                     each opt in metadata.options
                       li= opt
+                - if (metadata.steps)
+                  h2 Steps
+                  ol
+                    each step in metadata.steps
+                      li= step
                 p
-                  | Read recipe steps on <strong>StartupSupper</strong>:
+                  | View this recipe on <strong>StartupSupper</strong>:
                   br
-                  a(href='/recipes/' + recipe + '/', target='_blank')= 'http://startupsupper.com/recipes/' + recipe + '/'
+                  a(href='http://startupsupper.com/recipes/' + recipe + '/', target='_blank')= 'http://startupsupper.com/recipes/' + recipe + '/'
 
       .modal-footer
         button(data-dismiss='modal', aria-hidden='true').btn Close
