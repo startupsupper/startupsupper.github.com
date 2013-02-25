@@ -35,3 +35,9 @@ steps:
   - Make some room for the beef in the pan, then add it to the pan. Add more oil if necessary.
   - Add soy sauce and chili sauce. Continue cooking for 5-8 minutes or until beef is done, stirring continuously. Get the rice ready, it's time for STEAK NIGHT.
 ---
+
+* Skill level: Noob hacker
+* Prep time: 15 min
+* Cook time: 15 min
+* Serves: 2-3
+* Total Cost: $5-7

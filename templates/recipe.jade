@@ -9,9 +9,8 @@ block content
     h1= page.metadata.title
     .row
       .span4
-        .hide-on-print
-          .hidden-phone
-            mixin author(page.metadata.author)
+        .hidden-phone
+          mixin author(page.metadata.author)
         - if (page.metadata.ingredients)
           h3 Ingredients
           .well.well-small

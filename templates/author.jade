@@ -14,7 +14,7 @@ mixin author(authorName)
     - if (author.metadata.avatar)
       .row
         .span1
-          img(src=author.metadata.avatar, alt='').img-polaroid
+          img(src=author.metadata.avatar, alt='').img-polaroid.hide-on-print
         .span3
           - if (author.metadata.bio)
             .well.well-small= author.metadata.bio

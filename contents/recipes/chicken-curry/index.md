@@ -31,3 +31,8 @@ steps:
   - Garnish with fresh chopped cilantro. Serve with rice or flatbread.
 ---
 
+* Serves: 3
+* Total Cost: $8-10
+* Skill Level: Intermediate
+* Prep Time: 1-2 hrs
+* Cook Time: 45 min
