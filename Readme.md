@@ -59,3 +59,4 @@ Easily submit your recipe following these instructions:
 - [ ] Integrate <https://github.com/christophercliff/wintersmith-kelvin>
 - [ ] page.metadata.image in layout.jade
 - [ ] add kicksend or component email check (e.g. autocorrect gmail address)
+- [ ] verify pinterest page

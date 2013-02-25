@@ -10,10 +10,10 @@ ingredients:
 
 This is a test recipe, yahoo!
 
-Make it awesome!
+**Make it awesome!**
 
 1. Prepare!
 2. Cook!
-3. ~~Profit~~ Eat!
+3. <s>Profit</s> Eat!
 
 P.S. Add some photos if you can.
