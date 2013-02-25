@@ -6,6 +6,16 @@ template: recipe.jade
 ingredients:
   - 2 apples
   - 4 tablespoons sugar
+dependencies:
+  - mixing bowl
+  - oven
+options:
+  - oranges
+  - grapes
+photo: apple-surprise.jpg
+thumbnails:
+  - apple.jpg
+  - sugar.jpg
 ---
 
 This is a test recipe, yahoo!

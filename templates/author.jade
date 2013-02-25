@@ -1,8 +1,46 @@
 
 mixin author(authorName)
   - var author = contents.authors[authorName + '.json']
-  span.author
-    if author
-      a(href=author.metadata.url)= author.metadata.name
-    else
-      =authorName
+  - if (author && author.metadata)
+
+
+    //- name, avatar, and bio
+    h3 Author
+    - if (author.metadata.name)
+      h4= author.metadata.name
+    - else
+      h4= authorName
+
+    - if (author.metadata.avatar)
+      .row
+        .span1
+          img(src=author.metadata.avatar, alt='').img-polaroid
+        .span3
+          - if (author.metadata.bio)
+            .well.well-small= author.metadata.bio
+          p: ul.inline
+            //- url
+            - if (author.metadata.url)
+              li: a(href=author.metadata.url, target='_blank').btn.btn-inverse <i class="icon-external-link"></i>
+            //- github
+            - if (author.metadata.github)
+              li: a(href='https://github.com/' + author.metadata.github, target='_blank').btn.btn-inverse <i class="icon-github"></i>
+            //- twitter
+            - if (author.metadata.twitter)
+              li: a(href='https://twitter.com/' + author.metadata.twitter, target='_blank').btn.btn-inverse <i class="icon-twitter"></i>
+    - else
+      - if (author.metadata.bio)
+        .well.well-small= author.metadata.bio
+        p: ul.inline
+          //- url
+          - if (author.metadata.url)
+            li: a(href=author.metadata.url, target='_blank').btn.btn-inverse <i class="icon-external-link"></i>
+          //- github
+          - if (author.metadata.github)
+            li: a(href='https://github.com/' + author.metadata.github, target='_blank').btn.btn-inverse <i class="icon-github"></i>
+          //- twitter
+          - if (author.metadata.twitter)
+            li: a(href='https://twitter.com/' + author.metadata.twitter, target='_blank').btn.btn-inverse <i class="icon-twitter"></i>
+
+  - else
+    h4= authorName

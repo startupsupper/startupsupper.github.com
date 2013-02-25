@@ -2,5 +2,8 @@
   "name": "Your Name",
   "email": "your@email.com",
   "url": "http://yoursite.com",
-  "bio": "Something about you"
+  "bio": "Something about you",
+  "avatar": "http://link-to-your-profile-picture.com/avatar.png",
+  "twitter": "yourname",
+  "github": "yourname"
 }

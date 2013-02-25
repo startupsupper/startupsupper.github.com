@@ -10,6 +10,14 @@ Curated by [Nick][1], [Teng][2], and [Jacob][3]
 [2]: http://www.strikingly.com
 [3]: http://lepahc.com
 
+
+## Support
+
+Join us on [IRC WebChat](http://webchat.freenode.net/?channels=startupsupper) or with a client in `#startupsupper` on `irc.freenode.net`.
+
+You can also email <startupsupper@gmail.com> or file an [Issue](https://github.com/startupsupper/startupsupper.github.com/issues/new).
+
+
 ## Contribute Recipes
 
 Easily submit your recipe following these instructions:
@@ -53,6 +61,7 @@ Easily submit your recipe following these instructions:
 
     > (e.g. <http://startupsupper.com/recipes/chicken-noodle-soup>)
 
+
 ## Lazyweb Requests
 
 - [ ] CLI helper tool to create recipe, add instructions, and submit github pull request using github apiv3
@@ -60,3 +69,4 @@ Easily submit your recipe following these instructions:
 - [ ] page.metadata.image in layout.jade
 - [ ] add kicksend or component email check (e.g. autocorrect gmail address)
 - [ ] verify pinterest page
+- [ ] add photo and thumbnails for template recipe

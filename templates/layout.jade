@@ -1,17 +1,17 @@
-- page.metadata.title = (page.metadata.title) ? page.metadata.title + ' - StartupSupper' : 'StartupSupper'
+- page.title = (page.metadata.title) ? page.metadata.title + ' Recipe - StartupSupper' : 'StartupSupper'
 - page.metadata.description = (page.metadata.description) ? page.metadata.description : 'Recipes for Bootstrappers & Hungry Hackers'
 - page.metadata.image = (page.metadata.image) ? page.metadata.image : 'TODO'
 !!! 5
 html(lang='en')
   head
     meta(charset='utf-8')
-    title= page.metadata.title
+    title= page.title
     meta(name='description', content=page.metadata.description)
     meta(http-equiv='cleartype', content='on')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
     meta(property='og:site_name', content='StartupSupper')
     meta(property='og:type', content='website')
-    meta(property='og:title', content=page.metadata.title)
+    meta(property='og:title', content=page.title)
     meta(property='og:description', content=page.metadata.description)
     meta(property='og:image', content=page.metadata.image)
     link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Lato:100,300,400,900|Inconsolata')
@@ -50,10 +50,10 @@ html(lang='en')
           thead
             tr
               th To:
-              td!= 'Nikola Tesla <<a href="mailto:tesla@wardenclyffe.com">tesla@wardenclyffe.com</a>>'
+              td your@email.com
             tr
               th From:
-              td!= 'StartupSupper <<a href="mailto:startupsupper@gmail.com">startupsupper@gmail.com</a>>'
+              td startupsupper@gmail.com
             tr
               th Subject:
               td StartupSupper - Pepper Steak Stir Fry
@@ -61,8 +61,31 @@ html(lang='en')
             tr
               th(colspan=2) Message:
             tr
-              td(colspan=2).
-                Blah blah blah
+              td(colspan=2)
+                - var recipe = 'pepper-steak-stir-fry'
+                - var metadata = contents.recipes[recipe]['index.md']._metadata
+                h1= metadata.title
+                img(src='/recipes/' + recipe + '/' + metadata.photo, alt=metadata.title)
+                - if (metadata.ingredients)
+                  h3 Ingredients
+                  ul
+                    each ingredient in metadata.ingredients
+                      li= ingredient
+                - if (metadata.dependencies)
+                  h3 Dependencies
+                  ul
+                    each dependency in metadata.dependencies
+                      li= dependency
+                - if (metadata.options)
+                  h3 Options
+                  ul
+                    each opt in metadata.options
+                      li= opt
+                p
+                  | Read recipe preparation on <strong>StartupSupper</strong>:
+                  br
+                  a(href='/recipes/' + recipe + '/', target='_blank')= 'http://startupsupper.com/recipes/' + recipe + '/'
+
       .modal-footer
         button(data-dismiss='modal', aria-hidden='true').btn Close
 
@@ -71,7 +94,7 @@ html(lang='en')
       .navbar.navbar-inverse.navbar-fixed-top
         .navbar-inner
           .container
-            .pull-right
+            .pull-right.hide-on-print
               button(type='button', data-toggle='collapse', data-target='.nav-collapse').btn.btn-navbar
                 span.icon-bar
                 span.icon-bar
@@ -84,7 +107,7 @@ html(lang='en')
                 form.navbar-search.hidden-phone
                   .input-append
                     <input name="search" type="text" placeholder="search for a recipe&hellip;"><span class="add-on"><i class="icon-search"></i></span>
-            a(href='/').brand
+            a(href='http://startupsupper.com').brand
               i.icon-startupsupper
               | &nbsp;
               | StartupSupper
@@ -119,100 +142,13 @@ html(lang='en')
         block content
           != page.html
       #push
-    footer#footer
+    footer#footer.hide-on-print
       .container
-        p.muted.pull-right.credit &copy; 2012 <span class="hidden-phone">StartupSupper</span>
+        p.muted.pull-right.credit
+          != '&copy; ' + new Date().getFullYear()
+          | &nbsp;
+          span.hidden-phone StartupSupper
         p.muted.credit Curated by <a href="http://niftylettuce.com" target="_blank">Nick</a>, <a href="http://www.strikingly.com" target="_blank">Teng</a>, and <a href="http://lepahc.com" target="_blank">Jacob</a>
-    //-.
-      .wide.header.orange
-        .container
-          .sixteen.columns
-            h4.b.float Startup Supper
-            h6.lower.float.light.fw4(style='margin-top:6px;') Real Food For Bootstrappers &amp; Hungry Hackers
-      .wide
-        .container
-          .sixteen.columns
-            h1
-              span.b= page.title
-            .tags
-              .tag
-                | Skill level
-                .b= 'noob hacker'
-              .tag
-                | Prep time
-                .b= '15 min'
-              .tag
-                | Cook time
-                .b= '15 min'
-              .tag
-                | Serves
-                .b= '2-3'
-              .tag
-                | Total cost
-                .b= '$5-7'
-            img(src='beef-stir-fry.jpg')
-            div(style='height:15px;')
-          .four.columns.half-fixed
-            img(src='steak.jpg')
-          .four.columns.half-fixed
-            img(src='beansauce.jpg')
-          .four.columns.half-fixed
-            img(src='pepper.jpg')
-          .four.columns.half-fixed
-            img(src='jalapeno.jpg')
-          .four.columns.pad
-            h3.fw4 The Stack
-            ul.ingredients
-              li
-                span 1/2 lb flank steak, cut into small strips
-              li
-                span 1 red and 1 green bell pepper, diced
-              li
-                span 1 jalapeno pepper, diced
-              li
-                span 1 Asian eggplant, diced
-              li
-                span 3 cloves garlic, minced
-              li
-                span 3 tbsp vegetable/peanut oil
-              li
-                span 2 tbsp soy sauce
-              li
-                span 1 tbsp chili black bean sauce
-              li
-                span salt &amp; pepper
-          .eight.columns.pad
-            .text
-              h3.fw4 The Algo
-              p
-                .mono.gray while(hungry){
-                ul.indent.instructions.mono
-                  li 1. Cut beef into equal-sized small strips. Cut across the grain. Season with salt and pepper (lots of pepper).
-                  li 2. Heat a few tablespoons of oil in a large pan or wok. Add bell peppers, eggplant, jalapeno, and garlic. Add 1/2 tsp of salt. Saute for 5-8 minutes, stirring, or until eggplant is soft.
-                  li 3. Make some room for the beef in the pan, then add it to the pan. Add more oil if necessary.
-                  li 4. Add soy sauce and chili sauce. Continue cooking for 5-8 minutes or until beef is done, stirring continuously. Get the rice ready, it's time for STEAK NIGHT.
-                .mono.gray }
-          .four.columns.pad
-            h3.fw4 Dependencies
-            ul.dependencies
-              li Big pan/wok
-              li A good blade
-              li Cutting board
-              li Wooden spoon
-            br
-            br
-            h3.fw4 Optional
-            ul.dependencies
-              li Sriracha
-              li Any other vegetables
-              li Tofu
-              li Marinating the beef
-      .wide
-        .container
-          .sixteen.columns
-            h5.fw3.gray
-              Designed by Teng Bao, <a href='http://striking.ly'>Striking.ly</a>. Curated by Teng Bao &amp; Nick Baugh.
-
     script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js')
     script.
       window.jQuery || document.write('<script src="/js/vendor/jquery.min.js"><\/script>')

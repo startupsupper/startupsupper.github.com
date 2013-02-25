@@ -13,5 +13,15 @@ ingredients:
   - mayo
 ---
 
-Cut potatoes in small cubes. Cut onions and garlic in small pieces. Use some oil and cook the potatoes. Add onions and garlic when potatoes are nearly ready. Clean the pan. Cook the beef. Clean the pan. Cook bacon. Cut it in pieces. Mix it with onion, garlic, and potatoes. Serve on a plate. Beef on one side, the mixture of potatoes and everything else on the other side. Add ketchup and mayo.
-
+1. Cut potatoes in small cubes.
+2. Cut onions and garlic in small pieces.
+3. Use some oil and cook the potatoes.
+4. Add onions and garlic when potatoes are nearly ready.
+5. Clean the pan.
+6. Cook the beef.
+7. Clean the pan.
+8. Cook bacon.
+9. Cut it in pieces.
+10. Mix it with onion, garlic, and potatoes.
+11. Serve on a plate. Beef on one side, the mixture of potatoes and everything else on the other side.
+12. Add ketchup and mayo.
