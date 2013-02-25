@@ -4,13 +4,14 @@
 extends layout
 
 block content
+  include author
   .recipe
     h1= page.metadata.title
     .row
       .span4
         .hide-on-print
-          include author
-          mixin author(page.metadata.author)
+          .hidden-phone
+            mixin author(page.metadata.author)
         - if (page.metadata.ingredients)
           h3 Ingredients
           .well.well-small
@@ -42,3 +43,6 @@ block content
                   img(src=thumbnail, alt='')
         h2 Preparation
         != page.html
+    .row.visible-phone
+      .span4
+          mixin author(page.metadata.author)
