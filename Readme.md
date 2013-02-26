@@ -57,7 +57,7 @@ Easily submit your recipe following these instructions:
     git push origin source
     ```
 
-    > Then visit your fork of the repo Github on Github and submit a pull request.
+    > Then visit your fork of the repo on Github and submit a pull request for us.
 
     > (e.g. <http://startupsupper.com/recipes/chicken-noodle-soup>)
 
