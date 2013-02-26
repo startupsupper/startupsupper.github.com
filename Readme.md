@@ -68,7 +68,6 @@ Easily submit your recipe following these instructions:
 - [ ] Add easy UI or some type of modal slideshow for launching "Cooking Mode", where spacebar or arrow keys drive user through steps array
 - [ ] CLI helper tool to create recipe, add instructions, and submit github pull request using github apiv3
 - [ ] Integrate <https://github.com/christophercliff/wintersmith-kelvin>
-- [ ] page.metadata.image in layout.jade
 - [ ] add kicksend or component email check (e.g. autocorrect gmail address)
 - [ ] verify pinterest page
 - [ ] add photo and thumbnails for template recipe
