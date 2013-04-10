@@ -48,7 +48,7 @@ Easily submit your recipe following these instructions:
     ```bash
     cd ~/startupsupper.github.com/
     npm install
-    ./node_modules/wintersmith/bin/wintersmith preview
+    ./preview
     ```
 
 6. Submit a new pull request, we'll merge it, and your recipe will be automatically published.
