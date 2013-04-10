@@ -43,7 +43,9 @@ Easily submit your recipe following these instructions:
     +author: your-name
     ```
 
-5. (optional) Preview your recipe at <http://localhost:8080> (requires [node](http://nodejs.org))
+5. (optional) Preview your recipe at <http://localhost:8080/recipes/chicken-noodle-soup/> (note: you must have a trailing '/' when working local)
+
+    > Requirements: [node](http://nodejs.org)
 
     ```bash
     cd ~/startupsupper.github.com/
