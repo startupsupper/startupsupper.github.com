@@ -59,7 +59,7 @@ Easily submit your recipe following these instructions:
 
     > Then visit your fork of the repo on Github and submit a pull request for us.
 
-    > (e.g. <http://startupsupper.com/recipes/chicken-noodle-soup>)
+    > (e.g. <http://startupsupper.com/recipes/pepper-steak-stir-fry>)
 
 
 ## Lazyweb Requests
