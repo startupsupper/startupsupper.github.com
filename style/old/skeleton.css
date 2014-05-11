@@ -138,19 +138,19 @@ or wrap each row of columns in a <div class="row"> */
 .container .columns.fifth,
 .container .column.one-fifth,
 .container .columns.one-fifth {
-  width: 303.20000000000005px;
+  width: 303.2px;
 }
 .container .column.two-fifths,
 .container .columns.two-fifths {
-  width: 626.4000000000001px;
+  width: 626.4px;
 }
 .container .column.three-fifths,
 .container .columns.three-fifths {
-  width: 949.5999999999999px;
+  width: 949.6px;
 }
 .container .column.four-fifths,
 .container .columns.four-fifths {
-  width: 1272.8000000000002px;
+  width: 1272.8px;
 }
 .container .offset-one {
   padding-left: 101px;
@@ -571,21 +571,21 @@ or wrap each row of columns in a <div class="row"> */
   .container .columns.third,
   .container .column.one-third,
   .container .columns.one-third {
-    width: 395.99584000000004px;
+    width: 395.99584px;
   }
   .container .column.two-thirds,
   .container .columns.two-thirds {
-    width: 811.9916800000001px;
+    width: 811.99168px;
   }
   .container .column.fifth,
   .container .columns.fifth,
   .container .column.one-fifth,
   .container .columns.one-fifth {
-    width: 229.60000000000002px;
+    width: 229.6px;
   }
   .container .column.two-fifths,
   .container .columns.two-fifths {
-    width: 479.20000000000005px;
+    width: 479.2px;
   }
   .container .column.three-fifths,
   .container .columns.three-fifths {
@@ -593,7 +593,7 @@ or wrap each row of columns in a <div class="row"> */
   }
   .container .column.four-fifths,
   .container .columns.four-fifths {
-    width: 978.4000000000001px;
+    width: 978.4px;
   }
   .container .offset-one {
     padding-left: 78px;
@@ -803,11 +803,11 @@ or wrap each row of columns in a <div class="row"> */
   .container .columns.fifth,
   .container .column.one-fifth,
   .container .columns.one-fifth {
-    width: 197.60000000000002px;
+    width: 197.6px;
   }
   .container .column.two-fifths,
   .container .columns.two-fifths {
-    width: 415.20000000000005px;
+    width: 415.2px;
   }
   .container .column.three-fifths,
   .container .columns.three-fifths {
@@ -815,7 +815,7 @@ or wrap each row of columns in a <div class="row"> */
   }
   .container .column.four-fifths,
   .container .columns.four-fifths {
-    width: 850.4000000000001px;
+    width: 850.4px;
   }
   .container .offset-one {
     padding-left: 68px;
@@ -1469,7 +1469,7 @@ or wrap each row of columns in a <div class="row"> */
   .container .columns.fifth,
   .container .column.one-fifth,
   .container .columns.one-fifth {
-    width: 124.80000000000001px;
+    width: 124.8px;
   }
   .container .column.two-fifths,
   .container .columns.two-fifths {

@@ -37,7 +37,6 @@
   text-decoration: inherit;
   -webkit-font-smoothing: antialiased;
   /* sprites.less reset */
-
   display: inline;
   width: auto;
   height: auto;
@@ -78,7 +77,7 @@ a [class*=" icon-"] {
 /* makes the font 33% larger relative to the icon container */
 .icon-large:before {
   vertical-align: -10%;
-  font-size: 1.3333333333333333em;
+  font-size: 1.33333333em;
 }
 .btn [class^="icon-"],
 .nav [class^="icon-"],
@@ -86,7 +85,6 @@ a [class*=" icon-"] {
 .nav [class*=" icon-"] {
   display: inline;
   /* keeps button heights with and without icons the same */
-
 }
 .btn [class^="icon-"].icon-large,
 .nav [class^="icon-"].icon-large,
@@ -105,7 +103,6 @@ a [class*=" icon-"] {
 .nav-tabs [class*=" icon-"],
 .nav-pills [class*=" icon-"] {
   /* keeps button heights with and without icons the same */
-
 }
 .nav-tabs [class^="icon-"],
 .nav-pills [class^="icon-"],
@@ -130,7 +127,6 @@ li [class^="icon-"].icon-large,
 li [class*=" icon-"].icon-large,
 .nav li [class*=" icon-"].icon-large {
   /* increased font size for icon-large */
-
   width: 1.5625em;
 }
 ul.icons {
