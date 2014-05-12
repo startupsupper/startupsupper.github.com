@@ -1,0 +1,14 @@
+
+extends layout
+
+block content
+  include author
+  - var recipes = _.chain(contents.recipes._.directories).map(function(item){ return item.index }).sortBy(function(item) { return -item.date }).value()
+  - var recipe = recipes[0]
+  h1
+    ul.inline.pull-right
+      li: small: a(href='/recipes').btn.btn-inverse.btn-lg View all recipes
+      li: small: a(href='https://github.com/startupsupper/startupsupper.github.com#startupsupper', target='_blank').btn.btn-inverse.btn-lg Submit your recipe
+    | Latest Recipe
+  hr
+  include _recipe

@@ -1,0 +1,22 @@
+
+extends layout
+
+block content
+
+  - var recipes = _.chain(contents.recipes._.directories).map(function(item){ return item.index }).sortBy(function(item) { return -item.date }).value()
+
+  ul.thumbnails.recipe#iso
+    each recipe in recipes
+      - if (recipe.title !== 'Apple Surprise')
+        li.span4.post
+          a(href=recipe.url, title=recipe.title).thumbnail
+            img(src=recipe.metadata.photo ? recipe.url + recipe.metadata.photo : 'http://placehold.it/360x280&text=' + recipe.title, alt=recipe.title).img-responsive
+          a(href=recipe.url)= recipe.title
+          - var author = contents.authors[recipe.metadata.author + '.json']
+          - if (author && author.metadata)
+            - if (author.metadata.name)
+              p= author.metadata.name
+            else
+              p= recipe.metadata.author
+          - else
+            p= recipe.metadata.author

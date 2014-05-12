@@ -5,5 +5,8 @@
     "name": "StartupSupper",
     "owner": "Startup Supper",
     "index_articles": 5
+  },
+  "require": {
+    "_": "underscore"
   }
 }

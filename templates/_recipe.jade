@@ -1,0 +1,44 @@
+h1: a(href=recipe.url)= recipe.metadata.title
+.row
+  .span4
+    .hidden-phone
+      mixin author(recipe.metadata.author)
+    - if (recipe.metadata.ingredients)
+      h3 Ingredients
+      .well.well-small
+        ul
+          each ingredient in recipe.metadata.ingredients
+            li= ingredient
+    - if (recipe.metadata.dependencies)
+      h3 Dependencies
+      .well.well-small
+        ul
+          each dependency in recipe.metadata.dependencies
+            li= dependency
+    - if (recipe.metadata.options)
+      h3 Options
+      .well.well-small
+        ul
+          each opt in recipe.metadata.options
+            li= opt
+  .span8
+    - if (recipe.metadata.photo)
+      p.hide-on-print
+        a(href=recipe.url + recipe.metadata.photo, target='_blank')
+          img(src=recipe.url + recipe.metadata.photo, alt='').img-rounded
+    - if (recipe.metadata.thumbnails)
+      ul.thumbnails.hidden-phone.hide-on-print
+        each thumbnail in recipe.metadata.thumbnails
+          li.span2
+            a(href=recipe.url + thumbnail, target='_blank').thumbnail
+              img(src=recipe.url + thumbnail, alt='')
+    h2 Steps
+    ol
+      each step in recipe.metadata.steps
+        li= step
+    - if (recipe.html !== '')
+      h3 Notes
+      != recipe.html
+.row.visible-phone
+  .span4
+      mixin author(recipe.metadata.author)

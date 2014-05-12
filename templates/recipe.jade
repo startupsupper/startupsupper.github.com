@@ -5,48 +5,6 @@ extends layout
 
 block content
   include author
+  - var recipe = page
   .recipe
-    h1= page.metadata.title
-    .row
-      .span4
-        .hidden-phone
-          mixin author(page.metadata.author)
-        - if (page.metadata.ingredients)
-          h3 Ingredients
-          .well.well-small
-            ul
-              each ingredient in page.metadata.ingredients
-                li= ingredient
-        - if (page.metadata.dependencies)
-          h3 Dependencies
-          .well.well-small
-            ul
-              each dependency in page.metadata.dependencies
-                li= dependency
-        - if (page.metadata.options)
-          h3 Options
-          .well.well-small
-            ul
-              each opt in page.metadata.options
-                li= opt
-      .span8
-        - if (page.metadata.photo)
-          p.hide-on-print
-            a(href=page.metadata.photo, target='_blank')
-              img(src=page.metadata.photo, alt='').img-rounded
-        - if (page.metadata.thumbnails)
-          ul.thumbnails.hidden-phone.hide-on-print
-            each thumbnail in page.metadata.thumbnails
-              li.span2
-                a(href=thumbnail, target='_blank').thumbnail
-                  img(src=thumbnail, alt='')
-        h2 Steps
-        ol
-          each step in page.metadata.steps
-            li= step
-        - if (page.html !== '')
-          h3 Notes
-          != page.html
-    .row.visible-phone
-      .span4
-          mixin author(page.metadata.author)
+    include _recipe

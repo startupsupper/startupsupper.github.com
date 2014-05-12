@@ -1,10 +1,7 @@
 ---
-template: layout.jade
-include: featured.jade
+title: StartupSupper - Recipes for Bootstrappers & Hungry Hackers
+template: index.jade
 heroUnit: true
+description: Delicious recipes submitted as pull-requests by the open source community.
 notRecipe: true
 ---
-
-# Some title
-
-Some example content

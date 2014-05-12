@@ -1,11 +1,10 @@
-- page.title = (page.metadata.title) ? page.metadata.title + ' Recipe - StartupSupper' : 'StartupSupper'
 - page.metadata.description = (page.metadata.description) ? page.metadata.description : 'Recipes for Bootstrappers & Hungry Hackers'
-- page.metadata.image = (page.metadata.image) ? page.metadata.image : 'TODO'
-!!! 5
+- page.metadata.image = (page.metadata.image) ? page.metadata.image : 'https://avatars2.githubusercontent.com/u/3324449?s=400'
+doctype
 html(lang='en')
   head
     meta(charset='utf-8')
-    title= page.title
+    title= (page.title === '') ? 'StartupSupper - Recipes for Bootstrappers & Hungry Hackers' : 'StartupSupper - ' + page.title + ' Recipe'
     meta(name='description', content=page.metadata.description)
     meta(http-equiv='cleartype', content='on')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
@@ -17,11 +16,8 @@ html(lang='en')
     link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Lato:100,300,400,900|Inconsolata')
     link(rel='stylesheet', href='/style/bootstrap/bootstrap.css')
     link(rel='stylesheet', href='/style/bootstrap/responsive.css')
+    link(rel='stylesheet', href='/style/autocomplete.css')
   body
-
-    //- old stuff...
-    //- fork repo badge, facebook, twitter, pinterest
-    //-h1= page.title
 
     //- newsletter signup
     #newsletter(tabindex='-1', role='dialog', aria-labeledby='newsletter-label', aria-hidden='true').modal.hide.fade
@@ -30,11 +26,13 @@ html(lang='en')
         h3#newsletter-label Get weekly recipes
       .modal-body
         form(action='http://startupsupper.us6.list-manage1.com/subscribe/post?u=02d75e52b9eeb96bfb84bef02&amp;id=05dc247e98', method='post').form-inline.hidden-phone
-          input(type='email', name='EMAIL', placeholder='Email address', required)
-          button(type='submit').btn.btn-primary Subscribe
+          .input-append
+            input(type='email', name='EMAIL', placeholder='Email address', required)
+            button(type='submit').btn.btn-primary Subscribe
         form(action='http://startupsupper.us6.list-manage1.com/subscribe/post?u=02d75e52b9eeb96bfb84bef02&amp;id=05dc247e98', method='post').visible-phone
-          input(type='email', name='EMAIL', placeholder='Email address', required)
-          button(type='submit').btn.btn-primary Subscribe
+          .input-append
+            input(type='email', name='EMAIL', placeholder='Email address', required)
+            button(type='submit').btn.btn-primary Subscribe
           .text-success.pull-right <i class="icon-ok-sign"></i> No spam
       .modal-footer
         .hidden-phone.text-success.pull-left <i class="icon-ok-sign"></i> We'll never spam you.
@@ -63,7 +61,7 @@ html(lang='en')
             tr
               td(colspan=2)
                 - var recipe = 'pepper-steak-stir-fry'
-                - var metadata = contents.recipes[recipe]['index.md']._metadata
+                - var metadata = contents.recipes[recipe]['index.md'].metadata
                 h1= metadata.title
                 img(src='/recipes/' + recipe + '/' + metadata.photo, alt=metadata.title)
                 - if (metadata.ingredients)
@@ -109,17 +107,24 @@ html(lang='en')
                 .input-append.pull-left
                   <input class="span2" type="email" id='navbar-email' name='EMAIL' placeholder="Email address" required /><button class="btn btn-inverse" type="submit"><i class="icon-envelope-alt"></i></button>
               //-.
+                span.pull-left &nbsp;
                 form.navbar-search.hidden-phone
                   .input-append
-                    <input name="search" type="text" placeholder="search for a recipe&hellip;"><span class="add-on"><i class="icon-search"></i></span>
+                    <input name="search" type="text" placeholder="Search for a recipe&hellip;" id="st-search-input">
+                    <button type="submit" class="btn btn-inverse"><i class="icon-search"></i></button>
             a(href='/').brand
               i.icon-startupsupper
               | &nbsp;
               | StartupSupper
             .nav-collapse.collapse
               ul.nav
-                li.active: a(href='/') <i class="icon-star"></i> Featured
-                li: a(href='#recipes') <i class="icon-food"></i> Recipes
+                li
+                  form.navbar-search
+                    .input-append
+                      <input name="search" type="text" placeholder="Search for a recipe&hellip;" id="st-search-input">
+                      <button type="submit" class="btn btn-inverse"><i class="icon-search"></i></button>
+                li(class=page.metadata.template === 'index.jade' ? 'active' : ''): a(href='/') <i class="icon-star"></i> Featured
+                li(class=page.metadata.template === 'recipes.jade' || page.url.indexOf('/recipes') === 0 ? ' active' : ''): a(href='/recipes') <i class="icon-food"></i> Recipes
                 li.dropdown
                   a(href='#', data-toggle='dropdown').dropdown-toggle <i class="icon-gift"></i> Goodies <b class="caret"></b>
                   ul.dropdown-menu
@@ -128,6 +133,7 @@ html(lang='en')
                     li: a(href='https://www.facebook.com/startupsupper', target='_blank') <i class="icon-facebook-sign"></i> Facebook
                     li: a(href='https://twitter.com/startupsupper', target='_blank') <i class="icon-twitter"></i> Twitter
                     li: a(href='http://pinterest.com/startupsupper', target='_blank') <i class="icon-pinterest"></i> Pinterest
+                    li: a(href='/api.json', target='_blank') <i class="icon-list-alt"></i> API Feed
       - if (page.metadata.heroUnit)
         .hero-unit.background
           .container
@@ -158,6 +164,25 @@ html(lang='en')
     script.
       window.jQuery || document.write('<script src="/js/vendor/jquery.min.js"><\/script>')
     script(src='/js/vendor/bootstrap/build/bootstrap.min.js')
+    script(src='/js/vendor/jquery.swiftype.autocomplete.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/1.5.25/jquery.isotope.min.js')
+    script(src='/js/vendor/jquery.infinitescroll.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.min.js')
+    script.
+      $('#st-search-input').swiftype({
+        engineKey: 'S2Uk8LwYqbY4NPh7pmoo'
+      })
+      var $iso = $('#iso')
+      if ($iso.length === 1)
+        $iso.imagesLoaded(function() {
+          $iso.isotope({
+            itemSelector: '.post',
+            masonry: {
+              isFitWidth: true,
+              gutter: 20
+            }
+          })
+        })
     script.
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-38260551-1']);
