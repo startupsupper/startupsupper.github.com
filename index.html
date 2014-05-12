@@ -1,185 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Untitled</title>
-    <meta name="description" content="Recipes for Bootstrappers &amp; Hungry Hackers">
-    <meta http-equiv="cleartype" content="on">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta property="og:site_name" content="StartupSupper">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Untitled">
-    <meta property="og:description" content="Recipes for Bootstrappers &amp; Hungry Hackers">
-    <meta property="og:image" content="TODO">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:100,300,400,900|Inconsolata">
-    <link rel="stylesheet" href="/style/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="/style/bootstrap/responsive.css">
-  </head>
-  <body>
-    <div id="newsletter" tabindex="-1" role="dialog" aria-labeledby="newsletter-label" aria-hidden="true" class="modal hide fade">
-      <div class="modal-header">
-        <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
-        <h3 id="newsletter-label">Get weekly recipes</h3>
-      </div>
-      <div class="modal-body">
-        <form action="http://startupsupper.us6.list-manage1.com/subscribe/post?u=02d75e52b9eeb96bfb84bef02&amp;amp;id=05dc247e98" method="post" class="form-inline hidden-phone">
-          <input type="email" name="EMAIL" placeholder="Email address" required>
-          <button type="submit" class="btn btn-primary">Subscribe</button>
-        </form>
-        <form action="http://startupsupper.us6.list-manage1.com/subscribe/post?u=02d75e52b9eeb96bfb84bef02&amp;amp;id=05dc247e98" method="post" class="visible-phone">
-          <input type="email" name="EMAIL" placeholder="Email address" required>
-          <button type="submit" class="btn btn-primary">Subscribe</button>
-          <div class="text-success pull-right"><i class="icon-ok-sign"></i> No spam</div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <div class="hidden-phone text-success pull-left"><i class="icon-ok-sign"></i> We'll never spam you.</div>
-        <button data-dismiss="modal" aria-hidden="true" class="btn">Close</button><a href="#example" data-toggle="modal" class="btn btn-success hidden-phone">View Example</a>
-      </div>
-    </div>
-    <div id="example" tabindex="-1" role="dialog" aria-labeledby="example-label" aria-hidden="true" class="modal hide fade">
-      <div class="modal-header">
-        <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
-        <h3 id="example-label">Here's an example newsletter:</h3>
-      </div>
-      <div class="modal-body">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>To:</th>
-              <td>your@email.com</td>
-            </tr>
-            <tr>
-              <th>From:</th>
-              <td>startupsupper@gmail.com</td>
-            </tr>
-            <tr>
-              <th>Subject:</th>
-              <td>StartupSupper - Pepper Steak Stir Fry</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th colspan="2">Message:</th>
-            </tr>
-            <tr>
-              <td colspan="2">
-                <h1>Pepper Steak Stir Fry</h1><img src="/recipes/pepper-steak-stir-fry/pepper-steak-stir-fry-recipe.jpg" alt="Pepper Steak Stir Fry">
-                <h3>Ingredients</h3>
-                <ul>
-                  <li>1/2 lb. flank steak (cut into small strips)</li>
-                  <li>1 red bell pepper (diced)</li>
-                  <li>1 green bell pepper (diced)</li>
-                  <li>1 Asian eggplant (diced)</li>
-                  <li>3 cloves garlic (minced)</li>
-                  <li>3 tbsp. vegetable/peanut oil</li>
-                  <li>2 tbps. soy sauce</li>
-                  <li>1 tbsp. chili black bean sauce</li>
-                  <li>salt and pepper to taste</li>
-                </ul>
-                <h3>Dependencies</h3>
-                <ul>
-                  <li>Big frying pan/wok</li>
-                  <li>Good blade (Santoku or sharp knife)</li>
-                  <li>Cutting board</li>
-                  <li>Wooden spoon</li>
-                </ul>
-                <h3>Options</h3>
-                <ul>
-                  <li>Sriracha</li>
-                  <li>Any other vegetables</li>
-                  <li>Tofu</li>
-                  <li>Marinating the beef</li>
-                </ul>
-                <h2>Steps</h2>
-                <ol>
-                  <li>Cut beef into equal-sized small strips. Cut across the grain. Season with salt and pepper (lots of pepper).</li>
-                  <li>Heat a few tablespoons of oil in a large pan or wok. Add bell peppers, eggplant, jalapeno, and garlic. Add 1/2 tsp of salt. Saute for 5-8 minutes, stirring, or until eggplant is soft.</li>
-                  <li>Make some room for the beef in the pan, then add it to the pan. Add more oil if necessary.</li>
-                  <li>Add soy sauce and chili sauce. Continue cooking for 5-8 minutes or until beef is done, stirring continuously. Get the rice ready, it's time for STEAK NIGHT.</li>
-                </ol>
-                <p>View this recipe on <strong>StartupSupper</strong>:<br><a href="http://startupsupper.com/recipes/pepper-steak-stir-fry/" target="_blank">http://startupsupper.com/recipes/pepper-steak-stir-fry/</a></p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="modal-footer">
-        <button data-dismiss="modal" aria-hidden="true" class="btn">Close</button>
-      </div>
-    </div>
-    <div id="wrap">
-      <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-inner">
-          <div class="container">
-            <div class="pull-right hide-on-print">
-              <button type="button" data-toggle="collapse" data-target=".nav-collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-              <form action="http://startupsupper.us6.list-manage1.com/subscribe/post?u=02d75e52b9eeb96bfb84bef02&amp;amp;id=05dc247e98" method="post" class="form-inline hidden-phone pull-left navbar-form">
-                <div class="pull-left navbar-text">Get weekly recipes:&nbsp;</div>
-                <div class="input-append pull-left"><input class="span2" type="email" id='navbar-email' name='EMAIL' placeholder="Email address" required /><button class="btn btn-inverse" type="submit"><i class="icon-envelope-alt"></i></button></div>
-              </form>
-            </div><a href="/" class="brand"><i class="icon-startupsupper"></i>&nbsp;
-              StartupSupper</a>
-            <div class="nav-collapse collapse">
-              <ul class="nav">
-                <li class="active"><a href="/"><i class="icon-star"></i> Featured</a></li>
-                <li><a href="#recipes"><i class="icon-food"></i> Recipes</a></li>
-                <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="icon-gift"></i> Goodies <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#newsletter" data-toggle="modal" data-target="#newsletter"><i class="icon-envelope-alt"></i> Newsletter</a></li>
-                    <li><a href="https://github.com/startupsupper/startupsupper.github.com" target="_blank"><i class="icon-github"></i> Github</a></li>
-                    <li><a href="https://www.facebook.com/startupsupper" target="_blank"><i class="icon-facebook-sign"></i> Facebook</a></li>
-                    <li><a href="https://twitter.com/startupsupper" target="_blank"><i class="icon-twitter"></i> Twitter</a></li>
-                    <li><a href="http://pinterest.com/startupsupper" target="_blank"><i class="icon-pinterest"></i> Pinterest</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="hero-unit background">
-        <div class="container">
-          <h1>Recipes for Bootstrappers &amp; Hungry Hackers</h1>
-          <blockquote>
-            <h4>Living on instant ramen would be very unhealthy.</h4><small>Paul Graham in <cite><strong><a href="http://paulgraham.com/ramenprofitable.html#f1n" target="_blank">Ramen Profitable</a></strong></cite></small>
-          </blockquote>
-          <p>
-            <div class="pull-left">
-              <button data-toggle="modal" data-target="#newsletter" class="btn btn-success btn-large hidden-phone"><i class="icon-envelope-alt"></i> Join our Newsletter</button>
-              <button data-toggle="modal" data-target="#newsletter" class="btn btn-success btn-large visible-phone"><i class="icon-envelope-alt"></i> Join</button>
-            </div>
-            <div class="pull-left">&nbsp;</div>
-            <div class="pull-left"><a href="https://github.com/startupsupper/startupsupper.github.com#startupsupper" target="_blank" class="btn btn-inverse btn-large hidden-phone"><i class="icon-github"></i> Contribute on Github</a><a href="https://github.com/startupsupper/startupsupper.github.com#startupsupper" target="_blank" class="btn btn-inverse btn-large visible-phone"><i class="icon-github"></i> Github</a></div>
-          </p>
-        </div>
-      </div>
-      <div class="container"><h1>Some title</h1>
-<p>Some example content
-</p>
-
-      </div>
-      <div id="push"></div>
-    </div>
-    <footer id="footer" class="hide-on-print">
-      <div class="container">
-        <p class="muted pull-right credit">&copy; 2014&nbsp;<span class="hidden-phone">StartupSupper</span>
-        </p>
-        <p class="muted credit">Curated by <a href="http://niftylettuce.com" target="_blank">Nick</a>, <a href="http://www.strikingly.com" target="_blank">Teng</a>, and <a href="http://lepahc.com" target="_blank">Jacob</a></p>
-      </div>
-    </footer>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="/js/vendor/bootstrap/build/bootstrap.min.js"></script>
-    <script>
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-38260551-1']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-  </body>
-</html>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>StartupSupper - StartupSupper - Recipes for Bootstrappers &amp; Hungry Hackers Recipe</title><meta name="description" content="Delicious recipes submitted as pull-requests by the open source community."><meta http-equiv="cleartype" content="on"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><meta property="og:site_name" content="StartupSupper"><meta property="og:type" content="website"><meta property="og:title" content="StartupSupper - Recipes for Bootstrappers &amp; Hungry Hackers"><meta property="og:description" content="Delicious recipes submitted as pull-requests by the open source community."><meta property="og:image" content="https://avatars2.githubusercontent.com/u/3324449?s=400"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:100,300,400,900|Inconsolata"><link rel="stylesheet" href="/style/bootstrap/bootstrap.css"><link rel="stylesheet" href="/style/bootstrap/responsive.css"><link rel="stylesheet" href="/style/autocomplete.css"></head><body><div id="newsletter" tabindex="-1" role="dialog" aria-labeledby="newsletter-label" aria-hidden="true" class="modal hide fade"><div class="modal-header"><button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button><h3 id="newsletter-label">Get weekly recipes</h3></div><div class="modal-body"><form action="http://startupsupper.us6.list-manage1.com/subscribe/post?u=02d75e52b9eeb96bfb84bef02&amp;amp;id=05dc247e98" method="post" class="form-inline hidden-phone"><div class="input-append"><input type="email" name="EMAIL" placeholder="Email address" required><button type="submit" class="btn btn-primary">Subscribe</button></div></form><form action="http://startupsupper.us6.list-manage1.com/subscribe/post?u=02d75e52b9eeb96bfb84bef02&amp;amp;id=05dc247e98" method="post" class="visible-phone"><div class="input-append"><input type="email" name="EMAIL" placeholder="Email address" required><button type="submit" class="btn btn-primary">Subscribe</button></div><div class="text-success pull-right"><i class="icon-ok-sign"></i> No spam</div></form></div><div class="modal-footer"><div class="hidden-phone text-success pull-left"><i class="icon-ok-sign"></i> We'll never spam you.</div><button data-dismiss="modal" aria-hidden="true" class="btn">Close</button><a href="#example" data-toggle="modal" class="btn btn-success hidden-phone">View Example</a></div></div><div id="example" tabindex="-1" role="dialog" aria-labeledby="example-label" aria-hidden="true" class="modal hide fade"><div class="modal-header"><button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button><h3 id="example-label">Here's an example newsletter:</h3></div><div class="modal-body"><table class="table table-bordered"><thead><tr><th>To:</th><td>your@email.com</td></tr><tr><th>From:</th><td>startupsupper@gmail.com</td></tr><tr><th>Subject:</th><td>StartupSupper - Pepper Steak Stir Fry</td></tr></thead><tbody><tr><th colspan="2">Message:</th></tr><tr><td colspan="2"><h1>Pepper Steak Stir Fry</h1><img src="/recipes/pepper-steak-stir-fry/pepper-steak-stir-fry-recipe.jpg" alt="Pepper Steak Stir Fry"><h3>Ingredients</h3><ul><li>1/2 lb. flank steak (cut into small strips)</li><li>1 red bell pepper (diced)</li><li>1 green bell pepper (diced)</li><li>1 Asian eggplant (diced)</li><li>3 cloves garlic (minced)</li><li>3 tbsp. vegetable/peanut oil</li><li>2 tbps. soy sauce</li><li>1 tbsp. chili black bean sauce</li><li>salt and pepper to taste</li></ul><h3>Dependencies</h3><ul><li>Big frying pan/wok</li><li>Good blade (Santoku or sharp knife)</li><li>Cutting board</li><li>Wooden spoon</li></ul><h3>Options</h3><ul><li>Sriracha</li><li>Any other vegetables</li><li>Tofu</li><li>Marinating the beef</li></ul><h2>Steps</h2><ol><li>Cut beef into equal-sized small strips. Cut across the grain. Season with salt and pepper (lots of pepper).</li><li>Heat a few tablespoons of oil in a large pan or wok. Add bell peppers, eggplant, jalapeno, and garlic. Add 1/2 tsp of salt. Saute for 5-8 minutes, stirring, or until eggplant is soft.</li><li>Make some room for the beef in the pan, then add it to the pan. Add more oil if necessary.</li><li>Add soy sauce and chili sauce. Continue cooking for 5-8 minutes or until beef is done, stirring continuously. Get the rice ready, it's time for STEAK NIGHT.</li></ol><p>View this recipe on <strong>StartupSupper</strong>:<br><a href="http://startupsupper.com/recipes/pepper-steak-stir-fry/" target="_blank">http://startupsupper.com/recipes/pepper-steak-stir-fry/</a></p></td></tr></tbody></table></div><div class="modal-footer"><button data-dismiss="modal" aria-hidden="true" class="btn">Close</button></div></div><div id="wrap"><div class="navbar navbar-inverse navbar-fixed-top"><div class="navbar-inner"><div class="container"><div class="pull-right hide-on-print"><button type="button" data-toggle="collapse" data-target=".nav-collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><form action="http://startupsupper.us6.list-manage1.com/subscribe/post?u=02d75e52b9eeb96bfb84bef02&amp;amp;id=05dc247e98" method="post" class="form-inline hidden-phone pull-left navbar-form"><div class="pull-left navbar-text">Get weekly recipes:&nbsp;</div><div class="input-append pull-left"><input class="span2" type="email" id='navbar-email' name='EMAIL' placeholder="Email address" required /><button class="btn btn-inverse" type="submit"><i class="icon-envelope-alt"></i></button></div></form></div><a href="/" class="brand"><i class="icon-startupsupper"></i>&nbsp;
+StartupSupper</a><div class="nav-collapse collapse"><ul class="nav"><li><form class="navbar-search"><div class="input-append"><input name="search" type="text" placeholder="Search for a recipe&hellip;" id="st-search-input">
+<button type="submit" class="btn btn-inverse"><i class="icon-search"></i></button></div></form></li><li class="active"><a href="/"><i class="icon-star"></i> Featured</a></li><li><a href="/recipes"><i class="icon-food"></i> Recipes</a></li><li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="icon-gift"></i> Goodies <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="#newsletter" data-toggle="modal" data-target="#newsletter"><i class="icon-envelope-alt"></i> Newsletter</a></li><li><a href="https://github.com/startupsupper/startupsupper.github.com" target="_blank"><i class="icon-github"></i> Github</a></li><li><a href="https://www.facebook.com/startupsupper" target="_blank"><i class="icon-facebook-sign"></i> Facebook</a></li><li><a href="https://twitter.com/startupsupper" target="_blank"><i class="icon-twitter"></i> Twitter</a></li><li><a href="http://pinterest.com/startupsupper" target="_blank"><i class="icon-pinterest"></i> Pinterest</a></li><li><a href="/api.json" target="_blank"><i class="icon-list-alt"></i> API Feed</a></li></ul></li></ul></div></div></div></div><div class="hero-unit background"><div class="container"><h1>Recipes for Bootstrappers &amp; Hungry Hackers</h1><blockquote><h4>Living on instant ramen would be very unhealthy.</h4><small>Paul Graham in <cite><strong><a href="http://paulgraham.com/ramenprofitable.html#f1n" target="_blank">Ramen Profitable</a></strong></cite></small></blockquote><p><div class="pull-left"><button data-toggle="modal" data-target="#newsletter" class="btn btn-success btn-large hidden-phone"><i class="icon-envelope-alt"></i> Join our Newsletter</button><button data-toggle="modal" data-target="#newsletter" class="btn btn-success btn-large visible-phone"><i class="icon-envelope-alt"></i> Join</button></div><div class="pull-left">&nbsp;</div><div class="pull-left"><a href="https://github.com/startupsupper/startupsupper.github.com#startupsupper" target="_blank" class="btn btn-inverse btn-large hidden-phone"><i class="icon-github"></i> Contribute on Github</a><a href="https://github.com/startupsupper/startupsupper.github.com#startupsupper" target="_blank" class="btn btn-inverse btn-large visible-phone"><i class="icon-github"></i> Github</a></div></p></div></div><div class="container"><h1><ul class="inline pull-right"><li><small><a href="/recipes" class="btn btn-inverse btn-lg">View all recipes</a></small></li><li><small><a href="https://github.com/startupsupper/startupsupper.github.com#startupsupper" target="_blank" class="btn btn-inverse btn-lg">Submit your recipe</a></small></li></ul>Latest Recipe</h1><hr><h1><a href="/recipes/fried-rice/">Fried Rice</a></h1><div class="row"><div class="span4"><div class="hidden-phone"><h3>Author</h3><h4>doublefang</h4><div class="row"><div class="span1"><img src="http://secure.gravatar.com/avatar/3085f14afaa6949e03c1aba3f988565e.png" alt="" class="img-polaroid hide-on-print"></div><div class="span3"><div class="well well-small">do something interesting</div><p><ul class="inline"><li><a href="http://doublefang.typify.io/" target="_blank" class="btn btn-inverse"><i class="icon-external-link"></i></a></li><li><a href="https://github.com/doublefang" target="_blank" class="btn btn-inverse"><i class="icon-github"></i></a></li><li><a href="https://twitter.com/doublefang" target="_blank" class="btn btn-inverse"><i class="icon-twitter"></i></a></li></ul></p></div></div></div><h3>Ingredients</h3><div class="well well-small"><ul><li>2 cups cold cooked rice (long-grain)</li><li>2 tablespoons oil</li><li>Some vegetables (whatever you can find in fridge)</li></ul></div><h3>Dependencies</h3><div class="well well-small"><ul><li>wok or pan</li></ul></div><h3>Options</h3><div class="well well-small"><ul><li>shrimp</li><li>eggs</li><li>others (try pineapple)</li></ul></div></div><div class="span8"><p class="hide-on-print"><a href="/recipes/fried-rice/fried-rice.jpg" target="_blank"><img src="/recipes/fried-rice/fried-rice.jpg" alt="" class="img-rounded"></a></p><h2>Steps</h2><ol><li>Preheat the pan over high/medium heat</li><li>Swirl in oil, turn the heat to medium</li><li>optional:add shrimp or meat and stir-fry for about 2 mins</li><li>Add vegetables, cook till tender</li><li>Add rice, stir and toss to mix them up</li><li>You'll find out when it's ready...</li></ol><h3>Notes</h3><ul>
+<li>Be creative</li>
+<li>You may need salt, or chili sauce</li>
+</ul>
+</div></div><div class="row visible-phone"><div class="span4"><h3>Author</h3><h4>doublefang</h4><div class="row"><div class="span1"><img src="http://secure.gravatar.com/avatar/3085f14afaa6949e03c1aba3f988565e.png" alt="" class="img-polaroid hide-on-print"></div><div class="span3"><div class="well well-small">do something interesting</div><p><ul class="inline"><li><a href="http://doublefang.typify.io/" target="_blank" class="btn btn-inverse"><i class="icon-external-link"></i></a></li><li><a href="https://github.com/doublefang" target="_blank" class="btn btn-inverse"><i class="icon-github"></i></a></li><li><a href="https://twitter.com/doublefang" target="_blank" class="btn btn-inverse"><i class="icon-twitter"></i></a></li></ul></p></div></div></div></div></div><div id="push"></div></div><footer id="footer" class="hide-on-print"><div class="container"><p class="muted pull-right credit">&copy; 2014&nbsp;<span class="hidden-phone">StartupSupper</span></p><p class="muted credit">Curated by <a href="http://niftylettuce.com" target="_blank">Nick</a>, <a href="http://www.strikingly.com" target="_blank">Teng</a>, and <a href="http://lepahc.com" target="_blank">Jacob</a></p></div></footer><script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script><script>window.jQuery || document.write('<script src="/js/vendor/jquery.min.js"><\/script>')</script><script src="/js/vendor/bootstrap/build/bootstrap.min.js"></script><script src="/js/vendor/jquery.swiftype.autocomplete.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/1.5.25/jquery.isotope.min.js"></script><script src="/js/vendor/jquery.infinitescroll.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.min.js"></script><script>$('#st-search-input').swiftype({
+  engineKey: 'S2Uk8LwYqbY4NPh7pmoo'
+})
+var $iso = $('#iso')
+if ($iso.length === 1)
+  $iso.imagesLoaded(function() {
+    $iso.isotope({
+      itemSelector: '.post',
+      masonry: {
+        isFitWidth: true,
+        gutter: 20
+      }
+    })
+  })</script><script>var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-38260551-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();</script></body></html>
