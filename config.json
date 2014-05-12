@@ -6,6 +6,9 @@
     "owner": "Startup Supper",
     "index_articles": 5
   },
+  "jade": {
+    "pretty": true
+  },
   "require": {
     "_": "underscore"
   }
