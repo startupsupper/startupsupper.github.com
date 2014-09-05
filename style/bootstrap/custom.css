@@ -1,7 +1,153 @@
-.featured {
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.background {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url('/img/background.jpg');
-  background-position: center bottom;
-  background-attachment: fixed;
+  background-position: center 20%;
+  height: 300px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  color: #ffffff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.75);
+  border-bottom: 1px solid #e5e5e5;
+}
+@media (max-width: 979px) {
+  .background {
+    margin-top: -20px;
+  }
+}
+@media (max-width: 767px) {
+  .background {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 20px;
+  }
+  .background h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .background {
+    padding: 20px;
+    font-size: 14px;
+  }
+  .background h1 {
+    font-size: 20px;
+  }
+}
+body {
+  background-image: url('/img/linedpaper.png');
+}
+.recipe {
+  padding-top: 60px;
+}
+.recipe h1 {
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #ff6600;
+}
+.recipe h2,
+.recipe h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+@media (max-width: 979px) {
+  .recipe {
+    padding-top: 0px;
+  }
+}
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+    border-color: #000 !important;
+  }
+  a,
+  a:visited {
+    text-decoration: none;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+  .hide-on-print {
+    display: none;
+  }
+}
+.navbar-search {
+  padding-left: 10px;
+  padding-right: 10px;
 }
